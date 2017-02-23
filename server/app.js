@@ -2,8 +2,11 @@ console.log("WORKS");
 
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
 
 app.use(express.static('server/public'));
+app.use(bodyParser.urlencoded({extended: true}));
 
 var fishiesList = [{name: 'walleye'},{name: 'pike'},{name: 'muskie'}];
 
@@ -27,5 +30,26 @@ app.get('/fish/last/name', function(req, res){
   var lastIndex = fishiesList.length-1;
   res.send(fishiesList[lastIndex].name);
 });
+
+app.post('/fish/new', function(req, res){
+  var newFish = req.body;
+  for (var i = 0; i < fishiesList.length-1; i++) {
+    fishiesList[i].name;
+    console.log(fishiesList[i].name);
+  };
+  if(newFish.name == "" ||  newFish.name == fishiesList[i].name){
+    res.sendStatus(500);
+  }else {fishiesList.push(newFish);
+    res.sendStatus(200);
+
+  }
+});
+
+
+
+
+
+
+
 
 app.listen(5000);
