@@ -8,8 +8,7 @@ var bodyParser = require('body-parser');
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-var fishiesList = [{name: 'walleye'},{name: 'pike'},{name: 'muskie'}];
-
+var
 app.get('/fish', function(req, res){
   res.send(fishiesList);
 });
@@ -32,13 +31,7 @@ app.get('/fish/last/name', function(req, res){
 });
 
 app.post('/fish/new', function(req, res){
-  var newFish = req.body;
-  for (var i = 0; i < fishiesList.length-1; i++) {
-    fishiesList[i].name;
-    console.log(fishiesList[i].name);
-  };
-  if(newFish.name == "" ||  newFish.name == fishiesList[i].name){
-    res.sendStatus(500);
+  
   }else {fishiesList.push(newFish);
     res.sendStatus(200);
 

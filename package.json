@@ -8,9 +8,18 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.16.1",
     "express": "^4.14.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JL-golf14/node-express-blank-file.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JL-golf14/node-express-blank-file/issues"
+  },
+  "homepage": "https://github.com/JL-golf14/node-express-blank-file#readme",
+  "description": ""
 }
